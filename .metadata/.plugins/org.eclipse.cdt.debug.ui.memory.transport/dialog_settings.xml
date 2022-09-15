@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="EXPORT_DIALOG">
+		<item key="Start" value="0x10100000"/>
+		<item key="End" value="0x10104000"/>
+		<item key="Initial address" value="0x10100000"/>
+		<item key="File" value="C:\Users\Dean\strymon-workspace\tl_STM32MP1\stm32mp1_dsp\octave\memdump.bin"/>
+		<item key="SELECTED_EXPORTER" value="rawbinary"/>
+	</section>
+</section>

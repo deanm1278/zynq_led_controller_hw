@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Aug 17 16:32:53 2020
+# Process ID: 30708
+# Current directory: C:/Users/arthur/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3088
+# Log file: C:/Users/arthur/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/arthur/AppData/Roaming/Xilinx/Vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source D:/Github/Contractor/Zybo-Z7-20-DMA/Zybo-Z7-20-DMA/hw/scripts/digilent_vivado_checkout.tcl
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property pfm_name {} [get_files -all {D:/Github/Contractor/Zybo-Z7-20-DMA/Zybo-Z7-20-DMA/hw/proj/hw.srcs/sources_1/bd/system/system.bd}]
+file mkdir D:/Github/Contractor/Zybo-Z7-20-DMA/Zybo-Z7-20-DMA/release
+write_hw_platform -fixed -include_bit -force -file D:/Github/Contractor/Zybo-Z7-20-DMA/Zybo-Z7-20-DMA/release/system_wrapper.xsa
+archive_project D:/Github/Contractor/Zybo-Z7-20-DMA/Zybo-Z7-20-DMA/release/Zybo-Z7-20-DMA-hw.xpr.zip -temp_dir C:/Users/arthur/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-30708-WK142 -force -exclude_run_results

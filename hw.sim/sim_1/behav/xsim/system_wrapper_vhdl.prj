@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../hw.ip_user_files/bd/system/ip/system_axi_dma_0_0/sim/system_axi_dma_0_0.vhd" \
+"../../../../hw.ip_user_files/bd/system/ip/system_axi_gpio_0_0/sim/system_axi_gpio_0_0.vhd" \
+"../../../../hw.ip_user_files/bd/system/ip/system_axi_iic_0_0/sim/system_axi_iic_0_0.vhd" \
+"../../../../hw.ip_user_files/bd/system/ip/system_rst_ps7_0_100M_0/sim/system_rst_ps7_0_100M_0.vhd" \
+"../../../../hw.ip_user_files/bd/system/ip/system_axi_bram_ctrl_0_0/sim/system_axi_bram_ctrl_0_0.vhd" \
+"../../../../hw.ip_user_files/bd/system/ip/system_axi_bram_ctrl_1_0/sim/system_axi_bram_ctrl_1_0.vhd" \
+"../../../../hw.ip_user_files/bd/system/ip/system_c_counter_binary_0_0/sim/system_c_counter_binary_0_0.vhd" \
+
+# Do not sort compile order
+nosort
