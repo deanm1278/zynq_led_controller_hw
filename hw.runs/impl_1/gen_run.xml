@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1663264109">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1665699455">
+  <File Type="OPT-HWDEF" Name="system_wrapper.hwdef"/>
+  <File Type="ROUTE-BUS-SKEW" Name="system_wrapper_bus_skew_routed.rpt"/>
+  <File Type="PA-DCP" Name="system_wrapper.dcp"/>
   <File Type="BITSTR-BMM" Name="system_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="system_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="system_wrapper_timing_summary_init.rpt"/>
@@ -10,7 +13,6 @@
   <File Type="ROUTE-PWR-SUM" Name="system_wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="system_wrapper_reports.tcl"/>
   <File Type="OPT-DRC" Name="system_wrapper_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="system_wrapper.hwdef"/>
   <File Type="PWROPT-DCP" Name="system_wrapper_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="system_wrapper_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="system_wrapper_timing_summary_pwropted.rpt"/>
@@ -48,7 +50,6 @@
   <File Type="ROUTE-TIMING-RPX" Name="system_wrapper_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="system_wrapper_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="system_wrapper_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="system_wrapper_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="system_wrapper_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="system_wrapper_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="system_wrapper_postroute_physopt.dcp"/>
@@ -136,6 +137,7 @@
     <Step Id="write_bitstream"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="system_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_xbar_4"/>
   <BlockFileSet Type="BlockSrcs" Name="system_axi_iic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_d_axi_i2s_audio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_ledstream_0_0"/>

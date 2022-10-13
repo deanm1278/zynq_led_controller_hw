@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/hw/hw.runs/impl_1/system_wrapper.tcl"
+  variable script "C:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/hw.runs/impl_1/system_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -115,8 +115,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_msg_config -id {HDL-1065} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -125,47 +124,21 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 5
-  set_param synth.incrementalSynthesisCache C:/Users/Dean/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-548-DESKTOP-1ENIDNS/incrSyn
-OPTRACE "create in-memory project" START { }
-  create_project -in_memory -part xc7z010clg400-1
-  set_property board_part_repo_paths {C:/Users/Dean/AppData/Roaming/Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store} [current_project]
-  set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
-OPTRACE "create in-memory project" END { }
-OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/hw/hw.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/hw/hw.xpr [current_project]
+  reset_param project.defaultXPMLibraries 
+  open_checkpoint C:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/hw.runs/impl_1/system_wrapper.dcp
+  set_property webtalk.parent_dir C:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/hw.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/hw.xpr [current_project]
   set_property ip_repo_paths {
-  C:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0
-  C:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/hw/hw.ipdefs/repo
+  C:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0
+  C:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/hw.ipdefs/repo
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/hw/hw.cache/ip [current_project]
+  set_property ip_output_repo C:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/hw.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-OPTRACE "set parameters" END { }
-OPTRACE "add files" START { }
-  add_files -quiet C:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/hw/hw.runs/synth_1/system_wrapper.dcp
-  set_msg_config -source 4 -id {BD 41-1661} -limit 0
-  set_param project.isImplRun true
-  add_files C:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/hw/hw.srcs/sources_1/bd/system/system.bd
-  set_param project.isImplRun false
-OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/hw/hw.srcs/constrs_1/new/zybo.xdc
-OPTRACE "read constraints: implementation" END { }
-OPTRACE "add files" END { }
-OPTRACE "link_design" START { }
-  set_param project.isImplRun true
-  link_design -top system_wrapper -part xc7z010clg400-1
-OPTRACE "link_design" END { }
-  set_param project.isImplRun false
-OPTRACE "gray box cells" START { }
-OPTRACE "gray box cells" END { }
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
 OPTRACE "init_design_write_hwdef" START { }
-  write_hwdef -force -file system_wrapper.hwdef
 OPTRACE "init_design_write_hwdef" END { }
   close_msg_db -file init_design.pb
 } RESULT]

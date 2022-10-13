@@ -1,6 +1,3 @@
-#ifndef IP_SYSTEM_XBAR_6_SC_H_
-#define IP_SYSTEM_XBAR_6_SC_H_
-
 // (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
@@ -50,51 +47,27 @@
 // DO NOT MODIFY THIS FILE.
 
 
-#ifndef XTLM
-#include "xtlm.h"
-#endif
-#ifndef SYSTEMC_INCLUDED
-#include <systemc>
-#endif
+// IP VLNV: xilinx.com:ip:xlslice:1.0
+// IP Revision: 2
 
-#if defined(_MSC_VER)
-#define DllExport __declspec(dllexport)
-#elif defined(__GNUC__)
-#define DllExport __attribute__ ((visibility("default")))
-#else
-#define DllExport
-#endif
+(* X_CORE_INFO = "xlslice_v1_0_2_xlslice,Vivado 2020.2" *)
+(* CHECK_LICENSE_TYPE = "system_xlslice_0_0,xlslice_v1_0_2_xlslice,{}" *)
+(* CORE_GENERATION_INFO = "system_xlslice_0_0,xlslice_v1_0_2_xlslice,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlslice,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DIN_WIDTH=10,DIN_FROM=9,DIN_TO=2}" *)
+(* DowngradeIPIdentifiedWarnings = "yes" *)
+module system_xlslice_0_0 (
+  Din,
+  Dout
+);
 
-class axi_crossbar;
+input wire [9 : 0] Din;
+output wire [7 : 0] Dout;
 
-class DllExport system_xbar_6_sc : public sc_core::sc_module
-{
-public:
-
-  system_xbar_6_sc(const sc_core::sc_module_name& nm);
-  virtual ~system_xbar_6_sc();
-
-  // module socket-to-socket AXI TLM interfaces
-
-  xtlm::xtlm_aximm_target_socket* target_0_rd_socket;
-  xtlm::xtlm_aximm_target_socket* target_0_wr_socket;
-  xtlm::xtlm_aximm_initiator_socket* initiator_0_rd_socket;
-  xtlm::xtlm_aximm_initiator_socket* initiator_0_wr_socket;
-  xtlm::xtlm_aximm_target_socket* target_1_rd_socket;
-  xtlm::xtlm_aximm_target_socket* target_1_wr_socket;
-
-  // module socket-to-socket TLM interfaces
-
-
-protected:
-
-  axi_crossbar* mp_impl;
-
-private:
-
-  system_xbar_6_sc(const system_xbar_6_sc&);
-  const system_xbar_6_sc& operator=(const system_xbar_6_sc&);
-
-};
-
-#endif // IP_SYSTEM_XBAR_6_SC_H_
+  xlslice_v1_0_2_xlslice #(
+    .DIN_WIDTH(10),
+    .DIN_FROM(9),
+    .DIN_TO(2)
+  ) inst (
+    .Din(Din),
+    .Dout(Dout)
+  );
+endmodule

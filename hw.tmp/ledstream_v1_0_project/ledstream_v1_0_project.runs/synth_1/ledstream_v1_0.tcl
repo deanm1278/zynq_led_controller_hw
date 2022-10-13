@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "c:/users/dean/downloads/zybo-z7-20-dma-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.runs/synth_1/ledstream_v1_0.tcl"
+  variable script "c:/users/dean/documents/projects/zybo-z7-20-dma-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.runs/synth_1/ledstream_v1_0.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,30 +70,31 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir c:/users/dean/downloads/zybo-z7-20-dma-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.cache/wt [current_project]
-set_property parent.project_path c:/users/dean/downloads/zybo-z7-20-dma-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.xpr [current_project]
+set_property webtalk.parent_dir c:/users/dean/documents/projects/zybo-z7-20-dma-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.cache/wt [current_project]
+set_property parent.project_path c:/users/dean/documents/projects/zybo-z7-20-dma-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part_repo_paths {C:/Users/Dean/AppData/Roaming/Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:zybo-z7-10:part0:1.0 [current_project]
 set_property ip_repo_paths {
-  c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0
-  c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/hw/hw.ipdefs/repo
+  c:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0
+  c:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/hw.ipdefs/repo
 } [current_project]
 update_ip_catalog
-set_property ip_output_repo c:/users/dean/downloads/zybo-z7-20-dma-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.cache/ip [current_project]
+set_property ip_output_repo c:/users/dean/documents/projects/zybo-z7-20-dma-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library "" {
-  c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v
-  c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0.v
+  c:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v
+  c:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

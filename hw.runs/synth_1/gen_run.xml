@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1663264107">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1665699317">
   <File Type="PA-TCL" Name="system_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="system_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="system_wrapper_reports.tcl"/>
@@ -54,12 +54,13 @@
   <Strategy Version="1" Minor="2">
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design">
-      <Option Id="FlattenHierarchy">1</Option>
-      <Option Id="Directive">0</Option>
       <Option Id="FsmExtraction">0</Option>
+      <Option Id="Directive">0</Option>
+      <Option Id="FlattenHierarchy">1</Option>
     </Step>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="system_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_xbar_4"/>
   <BlockFileSet Type="BlockSrcs" Name="system_axi_iic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_d_axi_i2s_audio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_ledstream_0_0"/>

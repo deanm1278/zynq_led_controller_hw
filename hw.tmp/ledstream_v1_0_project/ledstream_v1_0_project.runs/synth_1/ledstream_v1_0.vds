@@ -2,62 +2,64 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Thu Sep 15 10:13:06 2022
-# Process ID: 15224
-# Current directory: c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.runs/synth_1
+# Start of session at: Thu Oct 13 14:54:31 2022
+# Process ID: 8480
+# Current directory: c:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.runs/synth_1
 # Command line: vivado.exe -log ledstream_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ledstream_v1_0.tcl
-# Log file: c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.runs/synth_1/ledstream_v1_0.vds
-# Journal file: c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.runs/synth_1\vivado.jou
+# Log file: c:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.runs/synth_1/ledstream_v1_0.vds
+# Journal file: c:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source ledstream_v1_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/hw/hw.ipdefs/repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/hw.ipdefs/repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.2/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
-Current IP cache path is c:/users/dean/downloads/zybo-z7-20-dma-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.cache/ip 
+Current IP cache path is c:/users/dean/documents/projects/zybo-z7-20-dma-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.cache/ip 
 Command: synth_design -top ledstream_v1_0 -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 16536
-WARNING: [Synth 8-2507] parameter declaration becomes local in ledstream_v1_0_S00_AXIS with formal parameter declaration list [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:57]
-WARNING: [Synth 8-2507] parameter declaration becomes local in ledstream_v1_0_S00_AXIS with formal parameter declaration list [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:175]
+INFO: [Synth 8-7075] Helper process launched with PID 10108
+WARNING: [Synth 8-2507] parameter declaration becomes local in ledstream_v1_0_S00_AXIS with formal parameter declaration list [c:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:58]
+WARNING: [Synth 8-2507] parameter declaration becomes local in ledstream_v1_0_S00_AXIS with formal parameter declaration list [c:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:176]
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1100.512 ; gain = 0.000
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1103.137 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'ledstream_v1_0' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ledstream_v1_0' [c:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0.v:4]
 	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'ledstream_v1_0_S00_AXIS' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:4]
+	Parameter LED_NUM_CHANNELS bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ledstream_v1_0_S00_AXIS' [c:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:4]
 	Parameter PWM_COUNTER_MAX bound to: 126 - type: integer 
 	Parameter PWM_COUNTER_H1 bound to: 80 - type: integer 
 	Parameter PWM_COUNTER_H0 bound to: 40 - type: integer 
 	Parameter LED_NUM_BITS bound to: 24 - type: integer 
+	Parameter LED_NUM_CHANNELS bound to: 10 - type: integer 
 	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
-	Parameter NUMBER_OF_INPUT_WORDS bound to: 8 - type: integer 
-	Parameter bit_num bound to: 3 - type: integer 
+	Parameter NUMBER_OF_INPUT_WORDS bound to: 10 - type: integer 
+	Parameter bit_num bound to: 4 - type: integer 
 	Parameter IDLE bound to: 2'b00 
 	Parameter WRITE_FIFO bound to: 2'b01 
 	Parameter LED_IDLE bound to: 2'b00 
 	Parameter LED_DATA_READY bound to: 2'b01 
 	Parameter LED_RUN bound to: 2'b10 
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:257]
-INFO: [Synth 8-6155] done synthesizing module 'ledstream_v1_0_S00_AXIS' (1#1) [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'ledstream_v1_0' (2#1) [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:218]
+INFO: [Synth 8-6155] done synthesizing module 'ledstream_v1_0_S00_AXIS' (1#1) [c:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ledstream_v1_0' (2#1) [c:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0.v:4]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1100.512 ; gain = 0.000
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1103.137 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1100.512 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1103.137 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1100.512 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1103.137 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-802] inferred FSM for state register 'led_exec_state_reg' in module 'ledstream_v1_0_S00_AXIS'
@@ -70,7 +72,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'led_exec_state_reg' in modu
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'led_exec_state_reg' using encoding 'one-hot' in module 'ledstream_v1_0_S00_AXIS'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1100.512 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1103.137 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -79,16 +81,17 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input    7 Bit       Adders := 1     
-	   2 Input    3 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
 +---Registers : 
-	               24 Bit    Registers := 8     
+	               24 Bit    Registers := 10    
 	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---RAMs : 
-	               64 Bit	(8 X 8 bit)          RAMs := 3     
+	               80 Bit	(10 X 8 bit)          RAMs := 3     
 +---Muxes : 
-	   2 Input   24 Bit        Muxes := 8     
-	   2 Input    7 Bit        Muxes := 8     
+	   2 Input   24 Bit        Muxes := 10    
+	   2 Input    7 Bit        Muxes := 10    
 	   3 Input    3 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 2     
 	   2 Input    1 Bit        Muxes := 6     
@@ -110,7 +113,7 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1100.512 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1103.137 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -120,9 +123,9 @@ Distributed RAM: Preliminary Mapping	Report (see note below)
 +---------------+---------------------------------------------------------------+-----------+----------------------+--------------+
 |Module Name    | RTL Object                                                    | Inference | Size (Depth x Width) | Primitives   | 
 +---------------+---------------------------------------------------------------+-----------+----------------------+--------------+
-|ledstream_v1_0 | ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg | Implied   | 8 x 8                | RAM32M x 16	 | 
-|ledstream_v1_0 | ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[2].stream_data_fifo_reg | Implied   | 8 x 8                | RAM32M x 16	 | 
-|ledstream_v1_0 | ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[1].stream_data_fifo_reg | Implied   | 8 x 8                | RAM32M x 16	 | 
+|ledstream_v1_0 | ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg | Implied   | 16 x 8               | RAM32M x 20	 | 
+|ledstream_v1_0 | ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[2].stream_data_fifo_reg | Implied   | 16 x 8               | RAM32M x 20	 | 
+|ledstream_v1_0 | ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[1].stream_data_fifo_reg | Implied   | 16 x 8               | RAM32M x 20	 | 
 +---------------+---------------------------------------------------------------+-----------+----------------------+--------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
@@ -134,7 +137,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1100.512 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1103.137 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -144,9 +147,9 @@ Distributed RAM: Final Mapping	Report
 +---------------+---------------------------------------------------------------+-----------+----------------------+--------------+
 |Module Name    | RTL Object                                                    | Inference | Size (Depth x Width) | Primitives   | 
 +---------------+---------------------------------------------------------------+-----------+----------------------+--------------+
-|ledstream_v1_0 | ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg | Implied   | 8 x 8                | RAM32M x 16	 | 
-|ledstream_v1_0 | ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[2].stream_data_fifo_reg | Implied   | 8 x 8                | RAM32M x 16	 | 
-|ledstream_v1_0 | ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[1].stream_data_fifo_reg | Implied   | 8 x 8                | RAM32M x 16	 | 
+|ledstream_v1_0 | ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg | Implied   | 16 x 8               | RAM32M x 20	 | 
+|ledstream_v1_0 | ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[2].stream_data_fifo_reg | Implied   | 16 x 8               | RAM32M x 20	 | 
+|ledstream_v1_0 | ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[1].stream_data_fifo_reg | Implied   | 16 x 8               | RAM32M x 20	 | 
 +---------------+---------------------------------------------------------------+-----------+----------------------+--------------+
 
 ---------------------------------------------------------------------------------
@@ -156,7 +159,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1100.512 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1103.137 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -174,92 +177,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1100.512 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1103.137 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1100.512 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1103.137 ; gain = 0.000
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[1] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r2_0_7_0_5/DOA[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[1] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r7_0_7_0_5/DOA[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[0] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r2_0_7_0_5/DOA[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[0] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r7_0_7_0_5/DOA[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[3] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r2_0_7_0_5/DOB[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[3] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r7_0_7_0_5/DOB[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[2] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r2_0_7_0_5/DOB[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[2] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r7_0_7_0_5/DOB[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[5] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r2_0_7_0_5/DOC[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[5] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r7_0_7_0_5/DOC[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[4] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r2_0_7_0_5/DOC[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[4] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r7_0_7_0_5/DOC[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[7] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r2_0_7_6_7/DOA[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[7] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r7_0_7_6_7/DOA[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[6] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r2_0_7_6_7/DOA[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[6] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r7_0_7_6_7/DOA[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[15] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r7_0_7_6_7/DOB[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[15] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r2_0_7_6_7/DOB[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[14] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r7_0_7_6_7/DOB[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[14] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r2_0_7_6_7/DOB[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[23] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r7_0_7_6_7/DOC[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[23] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r2_0_7_6_7/DOC[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[22] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r7_0_7_6_7/DOC[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[22] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[3].stream_data_fifo_reg_r2_0_7_6_7/DOC[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[9] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[2].stream_data_fifo_reg_r2_0_7_0_5/DOA[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[9] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[2].stream_data_fifo_reg_r7_0_7_0_5/DOA[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[8] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[2].stream_data_fifo_reg_r2_0_7_0_5/DOA[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[8] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[2].stream_data_fifo_reg_r7_0_7_0_5/DOA[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[11] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[2].stream_data_fifo_reg_r2_0_7_0_5/DOB[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[11] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[2].stream_data_fifo_reg_r7_0_7_0_5/DOB[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[10] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[2].stream_data_fifo_reg_r2_0_7_0_5/DOB[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[10] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[2].stream_data_fifo_reg_r7_0_7_0_5/DOB[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[13] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[2].stream_data_fifo_reg_r2_0_7_0_5/DOC[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[13] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[2].stream_data_fifo_reg_r7_0_7_0_5/DOC[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[12] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[2].stream_data_fifo_reg_r2_0_7_0_5/DOC[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[12] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[2].stream_data_fifo_reg_r7_0_7_0_5/DOC[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[17] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[1].stream_data_fifo_reg_r2_0_7_0_5/DOA[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[17] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[1].stream_data_fifo_reg_r7_0_7_0_5/DOA[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[16] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[1].stream_data_fifo_reg_r2_0_7_0_5/DOA[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[16] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[1].stream_data_fifo_reg_r7_0_7_0_5/DOA[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[19] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[1].stream_data_fifo_reg_r2_0_7_0_5/DOB[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[19] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[1].stream_data_fifo_reg_r7_0_7_0_5/DOB[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[18] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[1].stream_data_fifo_reg_r2_0_7_0_5/DOB[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[18] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[1].stream_data_fifo_reg_r7_0_7_0_5/DOB[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[21] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[1].stream_data_fifo_reg_r2_0_7_0_5/DOC[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[21] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[1].stream_data_fifo_reg_r7_0_7_0_5/DOC[1]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[20] with 1st driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[1].stream_data_fifo_reg_r2_0_7_0_5/DOC[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ledstream_v1_0_S00_AXIS_inst/d1[20] with 2nd driver pin 'ledstream_v1_0_S00_AXIS_inst/FIFO_GEN[1].stream_data_fifo_reg_r7_0_7_0_5/DOC[0]' [c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/ip_repo/ledstream_1.0/hdl/ledstream_v1_0_S00_AXIS.v:166]
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|       24|Failed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1100.512 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1103.137 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1100.512 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1103.137 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1100.512 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1103.137 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1100.512 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1103.137 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -276,48 +224,47 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    20|
-|3     |LUT1   |     3|
-|4     |LUT2   |   113|
-|5     |LUT3   |   209|
-|6     |LUT4   |     3|
-|7     |LUT5   |     9|
-|8     |LUT6   |    12|
-|9     |RAM32M |    32|
-|10    |FDRE   |   199|
+|2     |CARRY4 |    24|
+|3     |LUT1   |     4|
+|4     |LUT2   |   132|
+|5     |LUT3   |   296|
+|6     |LUT4   |     4|
+|7     |LUT5   |     8|
+|8     |LUT6   |    13|
+|9     |RAM32M |    40|
+|10    |FDRE   |   273|
 |11    |IBUF   |    28|
-|12    |OBUF   |     9|
+|12    |OBUF   |    11|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+-------------------------------+------------------------+------+
 |      |Instance                       |Module                  |Cells |
 +------+-------------------------------+------------------------+------+
-|1     |top                            |                        |   638|
-|2     |  ledstream_v1_0_S00_AXIS_inst |ledstream_v1_0_S00_AXIS |   600|
+|1     |top                            |                        |   834|
+|2     |  ledstream_v1_0_S00_AXIS_inst |ledstream_v1_0_S00_AXIS |   794|
 +------+-------------------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1100.512 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1103.137 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 48 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1100.512 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1100.512 ; gain = 0.000
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1103.137 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1103.137 ; gain = 0.000
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1100.512 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1103.137 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1100.512 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1103.137 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 32 instances were transformed.
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 32 instances
+  A total of 40 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 40 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-23 Infos, 3 Warnings, 48 Critical Warnings and 0 Errors encountered.
+23 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1100.512 ; gain = 0.000
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.runs/synth_1/ledstream_v1_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1103.137 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'c:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/hw.tmp/ledstream_v1_0_project/ledstream_v1_0_project.runs/synth_1/ledstream_v1_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file ledstream_v1_0_utilization_synth.rpt -pb ledstream_v1_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 15 10:13:31 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 13 14:54:55 2022...

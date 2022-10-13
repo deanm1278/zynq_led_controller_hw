@@ -8,6 +8,7 @@
 		parameter integer PWM_COUNTER_H1 = 80,
 		parameter integer PWM_COUNTER_H0 = 40,
 		parameter integer LED_NUM_BITS = 24,
+		parameter integer LED_NUM_CHANNELS = 10,
 		// User parameters ends
 		// Do not modify the parameters beyond this line
 
@@ -17,7 +18,7 @@
 	(
 		// Users to add ports here
 		// LED data
-		output wire [7 : 0] LEDS_O,
+		output wire [LED_NUM_CHANNELS-1 : 0] LEDS_O,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -46,7 +47,7 @@
 	endfunction
 
 	// Total number of input data.
-	localparam NUMBER_OF_INPUT_WORDS  = 8;
+	localparam NUMBER_OF_INPUT_WORDS  = LED_NUM_CHANNELS;
 	// bit_num gives the minimum number of bits needed to address 'NUMBER_OF_INPUT_WORDS' size of FIFO.
 	localparam bit_num  = clogb2(NUMBER_OF_INPUT_WORDS-1);
 	// Define the states of state machine
@@ -174,39 +175,18 @@
                 LED_DATA_READY  = 2'b01,
                 LED_RUN = 2'b10; 
 	
-	wire [7 : 0] o_leds;
+	wire [LED_NUM_CHANNELS-1 : 0] o_leds;
 	
 	reg [6 : 0] bit_counter;
 	reg [15 : 0] counter;
 	
 	reg [2 : 0] led_exec_state;
 	
-	reg [LED_NUM_BITS-1 : 0] srled0;
-	reg [LED_NUM_BITS-1 : 0] srled1;
-	reg [LED_NUM_BITS-1 : 0] srled2;
-	reg [LED_NUM_BITS-1 : 0] srled3;
-	reg [LED_NUM_BITS-1 : 0] srled4;
-	reg [LED_NUM_BITS-1 : 0] srled5;
-	reg [LED_NUM_BITS-1 : 0] srled6;
-	reg [LED_NUM_BITS-1 : 0] srled7;
+	reg [LED_NUM_BITS-1 : 0] srled[0 : LED_NUM_CHANNELS-1];
 	
-	wire [15 : 0] per0;
-	wire [15 : 0] per1;
-	wire [15 : 0] per2;
-	wire [15 : 0] per3;
-	wire [15 : 0] per4;
-	wire [15 : 0] per5;
-	wire [15 : 0] per6;
-	wire [15 : 0] per7;
+	wire [15 : 0] per[0 : LED_NUM_CHANNELS-1];
 	
-	wire [LED_NUM_BITS-1 : 0] d0;
-	wire [LED_NUM_BITS-1 : 0] d1;
-	wire [LED_NUM_BITS-1 : 0] d2;
-	wire [LED_NUM_BITS-1 : 0] d3;
-	wire [LED_NUM_BITS-1 : 0] d4;
-	wire [LED_NUM_BITS-1 : 0] d5;
-	wire [LED_NUM_BITS-1 : 0] d6;
-	wire [LED_NUM_BITS-1 : 0] d7;
+	wire [LED_NUM_BITS-1 : 0] d[0 : LED_NUM_CHANNELS-1];
 	
 	assign LEDS_O = o_leds;
 	
@@ -216,33 +196,15 @@
 	assign leds_running = (led_exec_state == LED_RUN);
 	
 	// output is assigned based on the pwm counter value
-	assign o_leds[0] = (!leds_running || (per0 < counter)) ? 1'b0 : 1'b1;
-	assign o_leds[1] = (!leds_running || (per1 < counter)) ? 1'b0 : 1'b1;
-	assign o_leds[2] = (!leds_running || (per2 < counter)) ? 1'b0 : 1'b1;
-	assign o_leds[3] = (!leds_running || (per3 < counter)) ? 1'b0 : 1'b1;
-	assign o_leds[4] = (!leds_running || (per4 < counter)) ? 1'b0 : 1'b1;
-	assign o_leds[5] = (!leds_running || (per5 < counter)) ? 1'b0 : 1'b1;
-	assign o_leds[6] = (!leds_running || (per6 < counter)) ? 1'b0 : 1'b1;
-	assign o_leds[7] = (!leds_running || (per7 < counter)) ? 1'b0 : 1'b1;
-	
-	// period is always assigned based on the top bit
-	assign per0 = ( srled0[LED_NUM_BITS-1] ? PWM_COUNTER_H1 : PWM_COUNTER_H0 );
-	assign per1 = ( srled1[LED_NUM_BITS-1] ? PWM_COUNTER_H1 : PWM_COUNTER_H0 );
-	assign per2 = ( srled2[LED_NUM_BITS-1] ? PWM_COUNTER_H1 : PWM_COUNTER_H0 );
-	assign per3 = ( srled3[LED_NUM_BITS-1] ? PWM_COUNTER_H1 : PWM_COUNTER_H0 );
-	assign per4 = ( srled4[LED_NUM_BITS-1] ? PWM_COUNTER_H1 : PWM_COUNTER_H0 );
-	assign per5 = ( srled5[LED_NUM_BITS-1] ? PWM_COUNTER_H1 : PWM_COUNTER_H0 );
-	assign per6 = ( srled6[LED_NUM_BITS-1] ? PWM_COUNTER_H1 : PWM_COUNTER_H0 );
-	assign per7 = ( srled7[LED_NUM_BITS-1] ? PWM_COUNTER_H1 : PWM_COUNTER_H0 );
-	
-	assign d0 = {FIFO_GEN[1].stream_data_fifo[0], FIFO_GEN[2].stream_data_fifo[0], FIFO_GEN[3].stream_data_fifo[0]};
-	assign d1 = {FIFO_GEN[1].stream_data_fifo[1], FIFO_GEN[2].stream_data_fifo[1], FIFO_GEN[3].stream_data_fifo[1]};
-	assign d2 = {FIFO_GEN[1].stream_data_fifo[2], FIFO_GEN[2].stream_data_fifo[2], FIFO_GEN[3].stream_data_fifo[2]};
-	assign d3 = {FIFO_GEN[1].stream_data_fifo[3], FIFO_GEN[2].stream_data_fifo[3], FIFO_GEN[3].stream_data_fifo[3]};
-	assign d4 = {FIFO_GEN[1].stream_data_fifo[4], FIFO_GEN[2].stream_data_fifo[4], FIFO_GEN[3].stream_data_fifo[4]};
-	assign d5 = {FIFO_GEN[1].stream_data_fifo[5], FIFO_GEN[2].stream_data_fifo[5], FIFO_GEN[3].stream_data_fifo[5]};
-	assign d6 = {FIFO_GEN[1].stream_data_fifo[6], FIFO_GEN[2].stream_data_fifo[6], FIFO_GEN[3].stream_data_fifo[6]};
-	assign d7 = {FIFO_GEN[1].stream_data_fifo[7], FIFO_GEN[2].stream_data_fifo[7], FIFO_GEN[3].stream_data_fifo[7]};
+	genvar i;
+    generate
+        for (i=0; i < LED_NUM_CHANNELS; i=i+1) begin
+            assign o_leds[i] = (!leds_running || (per[i] < counter)) ? 1'b0 : 1'b1;
+            // period is always assigned based on the top bit
+            assign per[i] = ( srled[i][LED_NUM_BITS-1] ? PWM_COUNTER_H1 : PWM_COUNTER_H0 );
+            assign d[i] = {FIFO_GEN[1].stream_data_fifo[i], FIFO_GEN[2].stream_data_fifo[i], FIFO_GEN[3].stream_data_fifo[i]};
+        end
+    endgenerate
 	
 	// master LED state machine
     always @(posedge S_AXIS_ACLK) 
@@ -283,40 +245,23 @@
     assign leds_done = (bit_counter == LED_NUM_BITS-1) && (counter == PWM_COUNTER_MAX-1);
     
     // shift register loading
-    always @(posedge S_AXIS_ACLK) begin
+    generate
+        for (i=0; i < LED_NUM_CHANNELS; i=i+1) begin
+                always @(posedge S_AXIS_ACLK) begin
     	if(!S_AXIS_ARESETN) begin
-	      srled0 <= 0;
-	      srled1 <= 0;
-	      srled2 <= 0;
-	      srled3 <= 0;
-	      srled4 <= 0;
-	      srled5 <= 0;
-	      srled6 <= 0;
-	      srled7 <= 0;
+	      srled[i] <= 0;
 	    end  
 	    else
 	      if (led_exec_state == LED_DATA_READY) begin
 	       // get data from fifo
-            srled0 <= d0;
-            srled1 <= d1;
-            srled2 <= d2;
-            srled3 <= d3;
-            srled4 <= d4;
-            srled5 <= d5;
-            srled6 <= d6;
-            srled7 <= d7;
+            srled[i] <= d[i];
 	      end
 	      else if (bshift) begin
-	           srled0 = srled0 << 1;
-	           srled1 = srled1 << 1;
-	           srled2 = srled2 << 1;
-	           srled3 = srled3 << 1;
-	           srled4 = srled4 << 1;
-	           srled5 = srled5 << 1;
-	           srled6 = srled6 << 1;
-	           srled7 = srled7 << 1;
+	           srled[i] = srled[i] << 1;
 	       end
         end
+        end
+    endgenerate
     
     // shift counter
 	always@(posedge S_AXIS_ACLK)

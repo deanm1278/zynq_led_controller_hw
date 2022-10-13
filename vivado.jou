@@ -1,20 +1,19 @@
 #-----------------------------------------------------------
-# Vivado v2020.1 (64-bit)
-# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
-# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Mon Aug 17 16:32:53 2020
-# Process ID: 30708
-# Current directory: C:/Users/arthur/AppData/Roaming/Xilinx/Vivado
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3088
-# Log file: C:/Users/arthur/AppData/Roaming/Xilinx/Vivado/vivado.log
-# Journal file: C:/Users/arthur/AppData/Roaming/Xilinx/Vivado\vivado.jou
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Sep 15 12:10:58 2022
+# Process ID: 11652
+# Current directory: C:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23740 C:\Users\Dean\Documents\projects\Zybo-Z7-20-DMA-hw.xpr\hw\hw.xpr
+# Log file: C:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/vivado.log
+# Journal file: C:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw\vivado.jou
 #-----------------------------------------------------------
 start_gui
-source D:/Github/Contractor/Zybo-Z7-20-DMA/Zybo-Z7-20-DMA/hw/scripts/digilent_vivado_checkout.tcl
+open_project C:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/hw.xpr
 update_compile_order -fileset sources_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 10
 wait_on_run impl_1
-set_property pfm_name {} [get_files -all {D:/Github/Contractor/Zybo-Z7-20-DMA/Zybo-Z7-20-DMA/hw/proj/hw.srcs/sources_1/bd/system/system.bd}]
-file mkdir D:/Github/Contractor/Zybo-Z7-20-DMA/Zybo-Z7-20-DMA/release
-write_hw_platform -fixed -include_bit -force -file D:/Github/Contractor/Zybo-Z7-20-DMA/Zybo-Z7-20-DMA/release/system_wrapper.xsa
-archive_project D:/Github/Contractor/Zybo-Z7-20-DMA/Zybo-Z7-20-DMA/release/Zybo-Z7-20-DMA-hw.xpr.zip -temp_dir C:/Users/arthur/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-30708-WK142 -force -exclude_run_results
+write_hw_platform -fixed -include_bit -force -file C:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/system_wrapper.xsa
+open_bd_design {C:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/hw.srcs/sources_1/bd/system/system.bd}

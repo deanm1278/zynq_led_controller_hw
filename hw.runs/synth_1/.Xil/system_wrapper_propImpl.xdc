@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/hw/hw.srcs/constrs_1/new/zybo.xdc rfile:../../../hw.srcs/constrs_1/new/zybo.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/hw.srcs/constrs_1/new/zybo.xdc rfile:../../../hw.srcs/constrs_1/new/zybo.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:47 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN R19   IOSTANDARD LVCMOS33 } [get_ports { ac_bclk }]; #IO_0_34 Sch=ac_bclk
 set_property src_info {type:XDC file:1 line:48 export:INPUT save:INPUT read:READ} [current_design]
@@ -49,3 +49,7 @@ set_property src_info {type:XDC file:1 line:134 export:INPUT save:INPUT read:REA
 set_property -dict { PACKAGE_PIN T12   IOSTANDARD LVCMOS33     } [get_ports { jc[6] }]; #IO_L2P_T0_34 Sch=jc_p[4]
 set_property src_info {type:XDC file:1 line:135 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN U12   IOSTANDARD LVCMOS33     } [get_ports { jc[7] }]; #IO_L2N_T0_34 Sch=jc_n[4]
+set_property src_info {type:XDC file:1 line:139 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN T14   IOSTANDARD LVCMOS33     } [get_ports { jd[0] }]; #IO_L5P_T0_34 Sch=jd_p[1]
+set_property src_info {type:XDC file:1 line:140 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN T15   IOSTANDARD LVCMOS33     } [get_ports { jd[1] }]; #IO_L5N_T0_34 Sch=jd_n[1]

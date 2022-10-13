@@ -1,6 +1,3 @@
-#ifndef IP_SYSTEM_XBAR_6_SC_H_
-#define IP_SYSTEM_XBAR_6_SC_H_
-
 // (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
@@ -50,51 +47,26 @@
 // DO NOT MODIFY THIS FILE.
 
 
-#ifndef XTLM
-#include "xtlm.h"
-#endif
-#ifndef SYSTEMC_INCLUDED
-#include <systemc>
-#endif
+// IP VLNV: xilinx.com:ip:xlslice:1.0
+// IP Revision: 2
 
-#if defined(_MSC_VER)
-#define DllExport __declspec(dllexport)
-#elif defined(__GNUC__)
-#define DllExport __attribute__ ((visibility("default")))
-#else
-#define DllExport
-#endif
+`timescale 1ns/1ps
 
-class axi_crossbar;
+(* DowngradeIPIdentifiedWarnings = "yes" *)
+module system_xlslice_1_0 (
+  Din,
+  Dout
+);
 
-class DllExport system_xbar_6_sc : public sc_core::sc_module
-{
-public:
+input wire [9 : 0] Din;
+output wire [1 : 0] Dout;
 
-  system_xbar_6_sc(const sc_core::sc_module_name& nm);
-  virtual ~system_xbar_6_sc();
-
-  // module socket-to-socket AXI TLM interfaces
-
-  xtlm::xtlm_aximm_target_socket* target_0_rd_socket;
-  xtlm::xtlm_aximm_target_socket* target_0_wr_socket;
-  xtlm::xtlm_aximm_initiator_socket* initiator_0_rd_socket;
-  xtlm::xtlm_aximm_initiator_socket* initiator_0_wr_socket;
-  xtlm::xtlm_aximm_target_socket* target_1_rd_socket;
-  xtlm::xtlm_aximm_target_socket* target_1_wr_socket;
-
-  // module socket-to-socket TLM interfaces
-
-
-protected:
-
-  axi_crossbar* mp_impl;
-
-private:
-
-  system_xbar_6_sc(const system_xbar_6_sc&);
-  const system_xbar_6_sc& operator=(const system_xbar_6_sc&);
-
-};
-
-#endif // IP_SYSTEM_XBAR_6_SC_H_
+  xlslice_v1_0_2_xlslice #(
+    .DIN_WIDTH(10),
+    .DIN_FROM(1),
+    .DIN_TO(0)
+  ) inst (
+    .Din(Din),
+    .Dout(Dout)
+  );
+endmodule

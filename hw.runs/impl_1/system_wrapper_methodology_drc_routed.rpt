@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Sep 15 10:51:18 2022
+| Date         : Thu Oct 13 15:19:49 2022
 | Host         : DESKTOP-1ENIDNS running 64-bit major release  (build 9200)
 | Command      : report_methodology -file system_wrapper_methodology_drc_routed.rpt -pb system_wrapper_methodology_drc_routed.pb -rpx system_wrapper_methodology_drc_routed.rpx
 | Design       : system_wrapper
@@ -20,15 +20,15 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: design_1
+          Floorplan: checkpoint_system_wrapper
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 23
+             Violations found: 25
 +-----------+----------+---------------------------------------------+------------+
 | Rule      | Severity | Description                                 | Violations |
 +-----------+----------+---------------------------------------------+------------+
 | LUTAR-1   | Warning  | LUT drives async reset alert                | 6          |
-| TIMING-18 | Warning  | Missing input or output delay               | 14         |
+| TIMING-18 | Warning  | Missing input or output delay               | 16         |
 | ULMTCS-1  | Warning  | Control Sets use limits recommend reduction | 1          |
 | XDCB-5    | Warning  | Runtime inefficient way to find pin objects | 2          |
 +-----------+----------+---------------------------------------------+------------+
@@ -185,21 +185,31 @@ Missing input or output delay
 An output delay is missing on jc[7] relative to clock(s) clk_fpga_0
 Related violations: <none>
 
+TIMING-18#15 Warning
+Missing input or output delay  
+An output delay is missing on jd[0] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An output delay is missing on jd[1] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
 ULMTCS-1#1 Warning
 Control Sets use limits recommend reduction  
-This design uses 460 control sets (vs. available limit of 4400, determined by 1 control set per CLB). This exceeds the control set use guideline of 7.5 percent. This is at a level where reduction is RECOMMENDED (see UG949). Use report_control_sets to get more details.
+This design uses 461 control sets (vs. available limit of 4400, determined by 1 control set per CLB). This exceeds the control set use guideline of 7.5 percent. This is at a level where reduction is RECOMMENDED (see UG949). Use report_control_sets to get more details.
 Related violations: <none>
 
 XDCB-5#1 Warning
 Runtime inefficient way to find pin objects  
 The option '-through : [get_pins -filter {NAME =~ */Inst_I2sCtl/Inst_Rst_Sync*/FDRE_inst_*/PRE} -hier]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '7' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/hw/hw.srcs/sources_1/bd/system/ip/system_d_axi_i2s_audio_0_0/src/d_axi_i2s_audio.xdc (Line: 2)
+Current XDC: C:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/hw.srcs/sources_1/bd/system/ip/system_d_axi_i2s_audio_0_0/src/d_axi_i2s_audio.xdc (Line: 2)
 Related violations: <none>
 
 XDCB-5#2 Warning
 Runtime inefficient way to find pin objects  
 The option '-through : [get_pins -filter {NAME =~ */Inst_I2sCtl/Inst_SyncBit_*/sreg_reg[0]/D} -hier]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '6' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: c:/Users/Dean/Downloads/Zybo-Z7-20-DMA-hw.xpr/hw/hw.srcs/sources_1/bd/system/ip/system_d_axi_i2s_audio_0_0/src/d_axi_i2s_audio.xdc (Line: 1)
+Current XDC: C:/Users/Dean/Documents/projects/Zybo-Z7-20-DMA-hw.xpr/hw/hw.srcs/sources_1/bd/system/ip/system_d_axi_i2s_audio_0_0/src/d_axi_i2s_audio.xdc (Line: 1)
 Related violations: <none>
 
 

@@ -2,4 +2,5 @@
 <section name="Workbench">
 	<item key="sdx_import_archive_file_v2" value="C:\Users\Dean\Downloads\Zybo-Z7-20-DMA-sw.ide.zip"/>
 	<item key="scw_hwspec" value="C:\Users\Dean\Downloads\Zybo-Z7-20-DMA-hw.xpr\hw"/>
+	<item key="scw_hwspec_file_selection" value="C:\Users\Dean\Documents\projects\Zybo-Z7-20-DMA-hw.xpr\hw"/>
 </section>

@@ -60,6 +60,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_axi_
 # IP: bd/system/ip/system_ledstream_0_0/system_ledstream_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_ledstream_0_0 || ORIG_REF_NAME==system_ledstream_0_0} -quiet] -quiet
 
+# IP: bd/system/ip/system_xlslice_0_0/system_xlslice_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_xlslice_0_0 || ORIG_REF_NAME==system_xlslice_0_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_xlslice_1_0/system_xlslice_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_xlslice_1_0 || ORIG_REF_NAME==system_xlslice_1_0} -quiet] -quiet
+
 # IP: bd/system/ip/system_auto_us_0/system_auto_us_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_auto_us_0 || ORIG_REF_NAME==system_auto_us_0} -quiet] -quiet
 

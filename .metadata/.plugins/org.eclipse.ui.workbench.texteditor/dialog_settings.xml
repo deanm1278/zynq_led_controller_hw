@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="MULTILED"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="I2S_RESET"/>
+			<item value="fftinbuf"/>
+			<item value="AUDIO_SAMPLING_RATE"/>
+			<item value="NR_SEC_TO_REC_PLAY"/>
+			<item value="RESET_TIMEOUT_COUNTER"/>
+			<item value="TEST_START_VALUE"/>
 			<item value="multiled"/>
 			<item value="HwCnt"/>
 			<item value="XScuGic_Connect"/>
@@ -17,14 +23,9 @@
 			<item value="XAxiDma_BdRingIntEnable"/>
 			<item value="MAX_PKT_LEN"/>
 			<item value="MARK_UNCACHEABLE"/>
-			<item value="RX_ADDR"/>
-			<item value="NUMBER_OF_BDS_TO_TRANSFER"/>
-			<item value="NUMBER_OF_BDS_PER_PKT"/>
-			<item value="DELAY_TIMER_COUNT"/>
-			<item value="runState"/>
-			<item value="MEM_BASE_ADDR"/>
 		</list>
 		<list key="replacehistory">
+			<item value="fftInBuf"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

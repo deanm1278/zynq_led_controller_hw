@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Thu Sep 15 10:48:19 2022
+//Date        : Thu Oct 13 15:15:09 2022
 //Host        : DESKTOP-1ENIDNS running 64-bit major release  (build 9200)
 //Command     : generate_target system.bd
 //Design      : system
@@ -3011,7 +3011,7 @@ module s01_couplers_imp_VQ497S
         .s_axi_wvalid(s01_couplers_to_auto_us_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=38,numReposBlks=24,numNonXlnxBlks=1,numHierBlks=14,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_clkrst_cnt=9,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "system.hwdef" *) 
+(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=40,numReposBlks=26,numNonXlnxBlks=1,numHierBlks=14,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_clkrst_cnt=9,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "system.hwdef" *) 
 module system
    (DDR_addr,
     DDR_ba,
@@ -3048,7 +3048,8 @@ module system
     ac_recdat,
     ac_reclrc,
     btns_4bits_tri_i,
-    jc);
+    jc,
+    jd);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -3085,13 +3086,14 @@ module system
   output ac_reclrc;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 btns_4bits TRI_I" *) input [3:0]btns_4bits_tri_i;
   output [7:0]jc;
+  output [1:0]jd;
 
   wire [31:0]S00_AXI_1_ARADDR;
   wire [1:0]S00_AXI_1_ARBURST;
   wire [3:0]S00_AXI_1_ARCACHE;
   wire [7:0]S00_AXI_1_ARLEN;
   wire [2:0]S00_AXI_1_ARPROT;
-  wire [0:0]S00_AXI_1_ARREADY;
+  wire S00_AXI_1_ARREADY;
   wire [2:0]S00_AXI_1_ARSIZE;
   wire S00_AXI_1_ARVALID;
   wire [31:0]S00_AXI_1_AWADDR;
@@ -3099,20 +3101,20 @@ module system
   wire [3:0]S00_AXI_1_AWCACHE;
   wire [7:0]S00_AXI_1_AWLEN;
   wire [2:0]S00_AXI_1_AWPROT;
-  wire [0:0]S00_AXI_1_AWREADY;
+  wire S00_AXI_1_AWREADY;
   wire [2:0]S00_AXI_1_AWSIZE;
   wire S00_AXI_1_AWVALID;
   wire S00_AXI_1_BREADY;
   wire [1:0]S00_AXI_1_BRESP;
-  wire [0:0]S00_AXI_1_BVALID;
+  wire S00_AXI_1_BVALID;
   wire [31:0]S00_AXI_1_RDATA;
-  wire [0:0]S00_AXI_1_RLAST;
+  wire S00_AXI_1_RLAST;
   wire S00_AXI_1_RREADY;
   wire [1:0]S00_AXI_1_RRESP;
-  wire [0:0]S00_AXI_1_RVALID;
+  wire S00_AXI_1_RVALID;
   wire [31:0]S00_AXI_1_WDATA;
   wire S00_AXI_1_WLAST;
-  wire [0:0]S00_AXI_1_WREADY;
+  wire S00_AXI_1_WREADY;
   wire [3:0]S00_AXI_1_WSTRB;
   wire S00_AXI_1_WVALID;
   wire ac_recdat_1;
@@ -3250,7 +3252,7 @@ module system
   wire d_axi_i2s_audio_0_BCLK_O;
   wire d_axi_i2s_audio_0_MCLK_O;
   wire d_axi_i2s_audio_0_SDATA_O;
-  wire [7:0]ledstream_0_s00_leds_o;
+  wire [9:0]ledstream_0_s00_leds_o;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -3432,6 +3434,8 @@ module system
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
   wire [3:0]xlconcat_0_dout;
   wire [0:0]xlconstant_0_dout;
+  wire [7:0]xlslice_0_Dout;
+  wire [1:0]xlslice_1_Dout;
 
   assign IIC_scl_o = axi_iic_0_IIC_SCL_O;
   assign IIC_scl_t = axi_iic_0_IIC_SCL_T;
@@ -3447,7 +3451,8 @@ module system
   assign axi_gpio_0_GPIO_TRI_I = btns_4bits_tri_i[3:0];
   assign axi_iic_0_IIC_SCL_I = IIC_scl_i;
   assign axi_iic_0_IIC_SDA_I = IIC_sda_i;
-  assign jc[7:0] = ledstream_0_s00_leds_o;
+  assign jc[7:0] = xlslice_0_Dout;
+  assign jd[1:0] = xlslice_1_Dout;
   system_axi_bram_ctrl_0_0 axi_bram_ctrl_0
        (.bram_addr_a(axi_bram_ctrl_0_BRAM_PORTA_ADDR),
         .bram_clk_a(axi_bram_ctrl_0_BRAM_PORTA_CLK),
@@ -4192,6 +4197,12 @@ module system
         .dout(xlconcat_0_dout));
   system_xlconstant_0_0 xlconstant_0
        (.dout(xlconstant_0_dout));
+  system_xlslice_0_0 xlslice_0
+       (.Din(ledstream_0_s00_leds_o),
+        .Dout(xlslice_0_Dout));
+  system_xlslice_1_0 xlslice_1
+       (.Din(ledstream_0_s00_leds_o),
+        .Dout(xlslice_1_Dout));
 endmodule
 
 module system_axi_interconnect_0_0
@@ -4299,30 +4310,30 @@ module system_axi_interconnect_0_0
   input [3:0]S00_AXI_arcache;
   input [7:0]S00_AXI_arlen;
   input [2:0]S00_AXI_arprot;
-  output [0:0]S00_AXI_arready;
+  output S00_AXI_arready;
   input [2:0]S00_AXI_arsize;
-  input [0:0]S00_AXI_arvalid;
+  input S00_AXI_arvalid;
   input [31:0]S00_AXI_awaddr;
   input [1:0]S00_AXI_awburst;
   input [3:0]S00_AXI_awcache;
   input [7:0]S00_AXI_awlen;
   input [2:0]S00_AXI_awprot;
-  output [0:0]S00_AXI_awready;
+  output S00_AXI_awready;
   input [2:0]S00_AXI_awsize;
-  input [0:0]S00_AXI_awvalid;
-  input [0:0]S00_AXI_bready;
+  input S00_AXI_awvalid;
+  input S00_AXI_bready;
   output [1:0]S00_AXI_bresp;
-  output [0:0]S00_AXI_bvalid;
+  output S00_AXI_bvalid;
   output [31:0]S00_AXI_rdata;
-  output [0:0]S00_AXI_rlast;
-  input [0:0]S00_AXI_rready;
+  output S00_AXI_rlast;
+  input S00_AXI_rready;
   output [1:0]S00_AXI_rresp;
-  output [0:0]S00_AXI_rvalid;
+  output S00_AXI_rvalid;
   input [31:0]S00_AXI_wdata;
-  input [0:0]S00_AXI_wlast;
-  output [0:0]S00_AXI_wready;
+  input S00_AXI_wlast;
+  output S00_AXI_wready;
   input [3:0]S00_AXI_wstrb;
-  input [0:0]S00_AXI_wvalid;
+  input S00_AXI_wvalid;
 
   wire S00_ACLK_1;
   wire S00_ARESETN_1;
@@ -4335,7 +4346,7 @@ module system_axi_interconnect_0_0
   wire [2:0]axi_interconnect_0_to_s00_couplers_ARPROT;
   wire axi_interconnect_0_to_s00_couplers_ARREADY;
   wire [2:0]axi_interconnect_0_to_s00_couplers_ARSIZE;
-  wire [0:0]axi_interconnect_0_to_s00_couplers_ARVALID;
+  wire axi_interconnect_0_to_s00_couplers_ARVALID;
   wire [31:0]axi_interconnect_0_to_s00_couplers_AWADDR;
   wire [1:0]axi_interconnect_0_to_s00_couplers_AWBURST;
   wire [3:0]axi_interconnect_0_to_s00_couplers_AWCACHE;
@@ -4343,20 +4354,20 @@ module system_axi_interconnect_0_0
   wire [2:0]axi_interconnect_0_to_s00_couplers_AWPROT;
   wire axi_interconnect_0_to_s00_couplers_AWREADY;
   wire [2:0]axi_interconnect_0_to_s00_couplers_AWSIZE;
-  wire [0:0]axi_interconnect_0_to_s00_couplers_AWVALID;
-  wire [0:0]axi_interconnect_0_to_s00_couplers_BREADY;
+  wire axi_interconnect_0_to_s00_couplers_AWVALID;
+  wire axi_interconnect_0_to_s00_couplers_BREADY;
   wire [1:0]axi_interconnect_0_to_s00_couplers_BRESP;
   wire axi_interconnect_0_to_s00_couplers_BVALID;
   wire [31:0]axi_interconnect_0_to_s00_couplers_RDATA;
   wire axi_interconnect_0_to_s00_couplers_RLAST;
-  wire [0:0]axi_interconnect_0_to_s00_couplers_RREADY;
+  wire axi_interconnect_0_to_s00_couplers_RREADY;
   wire [1:0]axi_interconnect_0_to_s00_couplers_RRESP;
   wire axi_interconnect_0_to_s00_couplers_RVALID;
   wire [31:0]axi_interconnect_0_to_s00_couplers_WDATA;
-  wire [0:0]axi_interconnect_0_to_s00_couplers_WLAST;
+  wire axi_interconnect_0_to_s00_couplers_WLAST;
   wire axi_interconnect_0_to_s00_couplers_WREADY;
   wire [3:0]axi_interconnect_0_to_s00_couplers_WSTRB;
-  wire [0:0]axi_interconnect_0_to_s00_couplers_WVALID;
+  wire axi_interconnect_0_to_s00_couplers_WVALID;
   wire [31:0]s00_couplers_to_axi_interconnect_0_ARADDR;
   wire [1:0]s00_couplers_to_axi_interconnect_0_ARBURST;
   wire [3:0]s00_couplers_to_axi_interconnect_0_ARCACHE;
@@ -4409,15 +4420,15 @@ module system_axi_interconnect_0_0
   assign M00_AXI_wvalid = s00_couplers_to_axi_interconnect_0_WVALID;
   assign S00_ACLK_1 = S00_ACLK;
   assign S00_ARESETN_1 = S00_ARESETN;
-  assign S00_AXI_arready[0] = axi_interconnect_0_to_s00_couplers_ARREADY;
-  assign S00_AXI_awready[0] = axi_interconnect_0_to_s00_couplers_AWREADY;
+  assign S00_AXI_arready = axi_interconnect_0_to_s00_couplers_ARREADY;
+  assign S00_AXI_awready = axi_interconnect_0_to_s00_couplers_AWREADY;
   assign S00_AXI_bresp[1:0] = axi_interconnect_0_to_s00_couplers_BRESP;
-  assign S00_AXI_bvalid[0] = axi_interconnect_0_to_s00_couplers_BVALID;
+  assign S00_AXI_bvalid = axi_interconnect_0_to_s00_couplers_BVALID;
   assign S00_AXI_rdata[31:0] = axi_interconnect_0_to_s00_couplers_RDATA;
-  assign S00_AXI_rlast[0] = axi_interconnect_0_to_s00_couplers_RLAST;
+  assign S00_AXI_rlast = axi_interconnect_0_to_s00_couplers_RLAST;
   assign S00_AXI_rresp[1:0] = axi_interconnect_0_to_s00_couplers_RRESP;
-  assign S00_AXI_rvalid[0] = axi_interconnect_0_to_s00_couplers_RVALID;
-  assign S00_AXI_wready[0] = axi_interconnect_0_to_s00_couplers_WREADY;
+  assign S00_AXI_rvalid = axi_interconnect_0_to_s00_couplers_RVALID;
+  assign S00_AXI_wready = axi_interconnect_0_to_s00_couplers_WREADY;
   assign axi_interconnect_0_ACLK_net = M00_ACLK;
   assign axi_interconnect_0_ARESETN_net = M00_ARESETN;
   assign axi_interconnect_0_to_s00_couplers_ARADDR = S00_AXI_araddr[31:0];
@@ -4426,20 +4437,20 @@ module system_axi_interconnect_0_0
   assign axi_interconnect_0_to_s00_couplers_ARLEN = S00_AXI_arlen[7:0];
   assign axi_interconnect_0_to_s00_couplers_ARPROT = S00_AXI_arprot[2:0];
   assign axi_interconnect_0_to_s00_couplers_ARSIZE = S00_AXI_arsize[2:0];
-  assign axi_interconnect_0_to_s00_couplers_ARVALID = S00_AXI_arvalid[0];
+  assign axi_interconnect_0_to_s00_couplers_ARVALID = S00_AXI_arvalid;
   assign axi_interconnect_0_to_s00_couplers_AWADDR = S00_AXI_awaddr[31:0];
   assign axi_interconnect_0_to_s00_couplers_AWBURST = S00_AXI_awburst[1:0];
   assign axi_interconnect_0_to_s00_couplers_AWCACHE = S00_AXI_awcache[3:0];
   assign axi_interconnect_0_to_s00_couplers_AWLEN = S00_AXI_awlen[7:0];
   assign axi_interconnect_0_to_s00_couplers_AWPROT = S00_AXI_awprot[2:0];
   assign axi_interconnect_0_to_s00_couplers_AWSIZE = S00_AXI_awsize[2:0];
-  assign axi_interconnect_0_to_s00_couplers_AWVALID = S00_AXI_awvalid[0];
-  assign axi_interconnect_0_to_s00_couplers_BREADY = S00_AXI_bready[0];
-  assign axi_interconnect_0_to_s00_couplers_RREADY = S00_AXI_rready[0];
+  assign axi_interconnect_0_to_s00_couplers_AWVALID = S00_AXI_awvalid;
+  assign axi_interconnect_0_to_s00_couplers_BREADY = S00_AXI_bready;
+  assign axi_interconnect_0_to_s00_couplers_RREADY = S00_AXI_rready;
   assign axi_interconnect_0_to_s00_couplers_WDATA = S00_AXI_wdata[31:0];
-  assign axi_interconnect_0_to_s00_couplers_WLAST = S00_AXI_wlast[0];
+  assign axi_interconnect_0_to_s00_couplers_WLAST = S00_AXI_wlast;
   assign axi_interconnect_0_to_s00_couplers_WSTRB = S00_AXI_wstrb[3:0];
-  assign axi_interconnect_0_to_s00_couplers_WVALID = S00_AXI_wvalid[0];
+  assign axi_interconnect_0_to_s00_couplers_WVALID = S00_AXI_wvalid;
   assign s00_couplers_to_axi_interconnect_0_ARREADY = M00_AXI_arready;
   assign s00_couplers_to_axi_interconnect_0_AWREADY = M00_AXI_awready;
   assign s00_couplers_to_axi_interconnect_0_BRESP = M00_AXI_bresp[1:0];

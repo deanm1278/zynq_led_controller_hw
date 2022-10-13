@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Thu Sep 15 10:48:20 2022
+//Date        : Thu Oct 13 15:15:09 2022
 //Host        : DESKTOP-1ENIDNS running 64-bit major release  (build 9200)
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
@@ -41,7 +41,8 @@ module system_wrapper
     ac_recdat,
     ac_reclrc,
     btns_4bits_tri_i,
-    jc);
+    jc,
+    jd);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -74,6 +75,7 @@ module system_wrapper
   output ac_reclrc;
   input [3:0]btns_4bits_tri_i;
   output [7:0]jc;
+  output [1:0]jd;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -113,6 +115,7 @@ module system_wrapper
   wire ac_reclrc;
   wire [3:0]btns_4bits_tri_i;
   wire [7:0]jc;
+  wire [1:0]jd;
 
   IOBUF IIC_scl_iobuf
        (.I(IIC_scl_o),
@@ -160,5 +163,6 @@ module system_wrapper
         .ac_recdat(ac_recdat),
         .ac_reclrc(ac_reclrc),
         .btns_4bits_tri_i(btns_4bits_tri_i),
-        .jc(jc));
+        .jc(jc),
+        .jd(jd));
 endmodule

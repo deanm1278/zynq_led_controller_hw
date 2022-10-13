@@ -9,11 +9,12 @@
 
 
 		// Parameters of Axi Slave Bus Interface S00_AXIS
-		parameter integer C_S00_AXIS_TDATA_WIDTH	= 32
+		parameter integer C_S00_AXIS_TDATA_WIDTH	= 32,
+		parameter integer LED_NUM_CHANNELS = 10
 	)
 	(
 		// Users to add ports here
-		output wire [7 : 0] s00_leds_o,
+		output wire [LED_NUM_CHANNELS-1 : 0] s00_leds_o,
 		// User ports ends
 		// Do not modify the ports beyond this line
 

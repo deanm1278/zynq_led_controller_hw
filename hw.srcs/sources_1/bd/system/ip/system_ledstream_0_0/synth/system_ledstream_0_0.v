@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:ledstream:1.0
-// IP Revision: 19
+// IP Revision: 22
 
 (* X_CORE_INFO = "ledstream_v1_0,Vivado 2020.2" *)
 (* CHECK_LICENSE_TYPE = "system_ledstream_0_0,ledstream_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "system_ledstream_0_0,ledstream_v1_0,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=ledstream,x_ipVersion=1.0,x_ipCoreRevision=19,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXIS_TDATA_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "system_ledstream_0_0,ledstream_v1_0,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=ledstream,x_ipVersion=1.0,x_ipCoreRevision=22,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXIS_TDATA_WIDTH=32,LED_NUM_CHANNELS=10}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module system_ledstream_0_0 (
   s00_leds_o,
@@ -65,8 +65,8 @@ module system_ledstream_0_0 (
   s00_axis_tvalid
 );
 
-output wire [7 : 0] s00_leds_o;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXIS_CLK, ASSOCIATED_BUSIF S00_AXIS, ASSOCIATED_RESET s00_axis_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+output wire [9 : 0] s00_leds_o;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXIS_CLK, ASSOCIATED_BUSIF S00_AXIS, ASSOCIATED_RESET s00_axis_aresetn, FREQ_HZ 1e+08, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXIS_CLK CLK" *)
 input wire s00_axis_aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXIS_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -80,12 +80,13 @@ input wire [31 : 0] s00_axis_tdata;
 input wire [3 : 0] s00_axis_tstrb;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TLAST" *)
 input wire s00_axis_tlast;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S00_AXIS TVALID" *)
 input wire s00_axis_tvalid;
 
   ledstream_v1_0 #(
-    .C_S00_AXIS_TDATA_WIDTH(32)  // AXI4Stream sink: Data Width
+    .C_S00_AXIS_TDATA_WIDTH(32),  // AXI4Stream sink: Data Width
+    .LED_NUM_CHANNELS(10)
   ) inst (
     .s00_leds_o(s00_leds_o),
     .s00_axis_aclk(s00_axis_aclk),
