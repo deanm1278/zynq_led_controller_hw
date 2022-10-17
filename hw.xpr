@@ -84,11 +84,8 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_ledstream_0_0/system_ledstream_0_0.xci">
-          <Proxy FileSetName="system_ledstream_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_d_axi_i2s_audio_0_0/system_d_axi_i2s_audio_0_0.xci">
-          <Proxy FileSetName="system_d_axi_i2s_audio_0_0"/>
+        <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_xbar_4/system_xbar_4.xci">
+          <Proxy FileSetName="system_xbar_4"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xci">
           <Proxy FileSetName="system_axi_gpio_0_0"/>
@@ -96,8 +93,11 @@
         <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_axi_iic_0_0/system_axi_iic_0_0.xci">
           <Proxy FileSetName="system_axi_iic_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_xbar_4/system_xbar_4.xci">
-          <Proxy FileSetName="system_xbar_4"/>
+        <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_d_axi_i2s_audio_0_0/system_d_axi_i2s_audio_0_0.xci">
+          <Proxy FileSetName="system_d_axi_i2s_audio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_ledstream_0_0/system_ledstream_0_0.xci">
+          <Proxy FileSetName="system_ledstream_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/system/hdl/system_wrapper.v">
@@ -265,9 +265,7 @@
     </Run>
     <Run Id="system_xbar_4_synth_1" Type="Ft3:Synth" SrcSet="system_xbar_4" Part="xc7z010clg400-1" ConstrsSet="system_xbar_4" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/system_xbar_4_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_xbar_4_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -277,9 +275,7 @@
     </Run>
     <Run Id="system_ledstream_0_0_synth_1" Type="Ft3:Synth" SrcSet="system_ledstream_0_0" Part="xc7z010clg400-1" ConstrsSet="system_ledstream_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/system_ledstream_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_ledstream_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -364,9 +360,7 @@
     </Run>
     <Run Id="system_xbar_4_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="system_xbar_4" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="system_xbar_4_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_xbar_4_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -383,9 +377,7 @@
     </Run>
     <Run Id="system_ledstream_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="system_ledstream_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="system_ledstream_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/system_ledstream_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

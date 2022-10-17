@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Oct 13 15:18:58 2022
+| Date         : Fri Oct 14 17:45:50 2022
 | Host         : DESKTOP-1ENIDNS running 64-bit major release  (build 9200)
 | Command      : report_utilization -file system_wrapper_utilization_placed.rpt -pb system_wrapper_utilization_placed.pb
 | Design       : system_wrapper
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs                 | 6292 |     0 |     17600 | 35.75 |
-|   LUT as Logic             | 5788 |     0 |     17600 | 32.89 |
+| Slice LUTs                 | 6295 |     0 |     17600 | 35.77 |
+|   LUT as Logic             | 5791 |     0 |     17600 | 32.90 |
 |   LUT as Memory            |  504 |     0 |      6000 |  8.40 |
 |     LUT as Distributed RAM |  178 |     0 |           |       |
 |     LUT as Shift Register  |  326 |     0 |           |       |
@@ -69,13 +69,13 @@ Table of Contents
 +--------------------------------------------+------+-------+-----------+-------+
 |                  Site Type                 | Used | Fixed | Available | Util% |
 +--------------------------------------------+------+-------+-----------+-------+
-| Slice                                      | 2513 |     0 |      4400 | 57.11 |
-|   SLICEL                                   | 1655 |     0 |           |       |
-|   SLICEM                                   |  858 |     0 |           |       |
-| LUT as Logic                               | 5788 |     0 |     17600 | 32.89 |
+| Slice                                      | 2532 |     0 |      4400 | 57.55 |
+|   SLICEL                                   | 1653 |     0 |           |       |
+|   SLICEM                                   |  879 |     0 |           |       |
+| LUT as Logic                               | 5791 |     0 |     17600 | 32.90 |
 |   using O5 output only                     |    0 |       |           |       |
-|   using O6 output only                     | 4434 |       |           |       |
-|   using O5 and O6                          | 1354 |       |           |       |
+|   using O6 output only                     | 4440 |       |           |       |
+|   using O5 and O6                          | 1351 |       |           |       |
 | LUT as Memory                              |  504 |     0 |      6000 |  8.40 |
 |   LUT as Distributed RAM                   |  178 |     0 |           |       |
 |     using O5 output only                   |    0 |       |           |       |
@@ -86,10 +86,10 @@ Table of Contents
 |     using O6 output only                   |  244 |       |           |       |
 |     using O5 and O6                        |   82 |       |           |       |
 | Slice Registers                            | 7882 |     0 |     35200 | 22.39 |
-|   Register driven from within the Slice    | 4268 |       |           |       |
-|   Register driven from outside the Slice   | 3614 |       |           |       |
-|     LUT in front of the register is unused | 2740 |       |           |       |
-|     LUT in front of the register is used   |  874 |       |           |       |
+|   Register driven from within the Slice    | 4251 |       |           |       |
+|   Register driven from outside the Slice   | 3631 |       |           |       |
+|     LUT in front of the register is unused | 2707 |       |           |       |
+|     LUT in front of the register is used   |  924 |       |           |       |
 | Unique Control Sets                        |  461 |       |      4400 | 10.48 |
 +--------------------------------------------+------+-------+-----------+-------+
 * * Note: Available Control Sets calculated as Slice * 1, Review the Control Sets Report for more information regarding control sets.

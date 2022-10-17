@@ -21,7 +21,7 @@ ADDRESS_MAP system_i_processing_system7_0 ARM 100 system_i/processing_system7_0
 
     ADDRESS_SPACE system_i_axi_bram_ctrl_1 RAMB32 [0X0000000042000000:0X0000000042000FFF] system_i/axi_bram_ctrl_1
         BUS_BLOCK
-            system_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram RAMB32 [31:0] [0:1023] PLACED = X1Y6;
+            system_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram RAMB32 [31:0] [0:1023] PLACED = X0Y6;
         END_BUS_BLOCK;
     END_ADDRESS_SPACE;
 
