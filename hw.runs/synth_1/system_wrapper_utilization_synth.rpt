@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Fri Oct 14 17:44:06 2022
+| Date         : Wed Oct 19 12:33:53 2022
 | Host         : DESKTOP-1ENIDNS running 64-bit major release  (build 9200)
 | Command      : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
 | Design       : system_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   23 |     0 |       100 | 23.00 |
+| Bonded IOB                  |   27 |     0 |       100 | 27.00 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         2 |  0.00 |
@@ -147,7 +147,7 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | OBUF     |   16 |                  IO |
-| IBUF     |    7 |                  IO |
+| IBUF     |   11 |                  IO |
 | OBUFT    |    2 |                  IO |
 +----------+------+---------------------+
 
@@ -166,6 +166,7 @@ Table of Contents
 | system_d_axi_i2s_audio_0_0    |    1 |
 | system_blk_mem_gen_0_0        |    1 |
 | system_axi_iic_0_0            |    1 |
+| system_axi_gpio_1_0           |    1 |
 | system_axi_gpio_0_0           |    1 |
 | system_axi_dma_1_0            |    1 |
 | system_axi_dma_0_0            |    1 |
@@ -173,6 +174,7 @@ Table of Contents
 | system_axi_bram_ctrl_0_0      |    1 |
 | system_auto_us_1              |    1 |
 | system_auto_us_0              |    1 |
+| system_auto_pc_7              |    1 |
 | system_auto_pc_6              |    1 |
 | system_auto_pc_5              |    1 |
 | system_auto_pc_4              |    1 |

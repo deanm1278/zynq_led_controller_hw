@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1665794591">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1666207917">
   <File Type="BITSTR-BMM" Name="system_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="system_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="system_wrapper_timing_summary_init.rpt"/>
@@ -140,4 +140,6 @@
   <BlockFileSet Type="BlockSrcs" Name="system_axi_iic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_d_axi_i2s_audio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_ledstream_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_xbar_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axi_gpio_1_0"/>
 </GenRun>
