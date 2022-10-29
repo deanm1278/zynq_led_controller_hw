@@ -86,5 +86,3 @@
 !*.xmp
 
 zybo_dma_app/*
-zybo_dma_app_system/*
-zybo_dma_hw/*
